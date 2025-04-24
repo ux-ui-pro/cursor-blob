@@ -52,6 +52,18 @@ const cursorBlob = new CursorBlob({
   ease: 'expo.out',
 });
 ```
+
+The CursorBlob plugin supports dynamically changing the cursor's appearance using the `data-cursor-style` attribute. You can add this data attribute to any HTML element to define custom behavior and cursor style on hover.
+
+##### How it works
+Each element with the attribute `data-cursor-style="your-style"` will switch the cursor’s class to `cursor--your-style`. For example:
+
+```html
+<div data-cursor-style="blend">...</div>
+```
+
+This will add the class `.cursor--blend` to the cursor element. You can then define the necessary styles in CSS using this class. [Examples](https://codepen.io/ux-ui/full/bNNgBwZ).
+
 <br>
 
 &#10148; **Options**
@@ -67,9 +79,9 @@ const cursorBlob = new CursorBlob({
 
 &#10148; **API**
 
-| Method                    | Description                                                 |
-|:--------------------------|:------------------------------------------------------------|
-| `destroy()`               | Removes all event listeners and cancels the animation loop. |
+| Method      | Description                                                 |
+|:------------|:------------------------------------------------------------|
+| `destroy()` | Removes all event listeners and cancels the animation loop. |
 <br>
 
 &#10148; **License**
